@@ -8,92 +8,118 @@
     src: url(../fonts/Georama/Georama-VariableFont_wdth\,wght.ttf);
 }
 
-:root{
-    h1, h2, h3{
-        font-family: K2D Bold;
+html{
+    width: 100%;
+}
+
+.page-container{
+    max-width: 1440px;
+    padding: 0px 64px;
+    margin: 0 auto;
+}
+
+h1, h2, h3{
+    font-family: K2D Bold;
+}
+h1{
+    font-size: 96px;
+}
+h2{
+    font-size: 72px;
+}
+h3{
+    font-size: 32px;
+}
+li, button, input{
+    font-size: 16px;
+    font-family: Georama;
+    font-weight: 500;
+}
+body{
+    margin: 0px;
+    font-size: 20px;
+    font-family: Georama;
+    font-weight: 500;
+}
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    box-sizing: content-box;
+    border: 0px;
+    border-radius: 32px;
+    background-color: #FF4D4D;
+    border: 2px solid #FF4D4D;
+    transition: 100ms ease-in-out;
+    &:hover{
+        cursor: pointer;
+        background-color: white;
+        color: #FF4D4D;
     }
+    &:active{
+        cursor: pointer;
+        background-color: #FFD3D3;
+        color: #FF4D4D;
+    }
+    .arrow{
+        font-size: 32px;
+        font-weight: 200;
+        margin-bottom: 5px;
+    }
+}
+.btn-rect{
+    min-width: 192px;
+    height: 40px;
+}
+.btn-circle{
+    box-sizing: content-box;
+    border: 2px solid #FF4D4D;
+    border-radius: 100%;
+    font-size: 40px;
+    font-weight: 300;
+    height: 40px;
+    width: 42px;
+    padding: 0px;
+    transition: 100ms ease-in-out;
+    &:hover{
+        cursor: pointer;
+        background-color: white;
+        svg{
+            path{
+                stroke: #FF4D4D;
+            }
+        }
+    }
+    &:active{
+        cursor: pointer;
+        background-color: #FFD3D3;
+        color: #FF4D4D;
+    }
+}
+ul{
+    list-style: none;
+}
+p{
+    /* margin: 0px; */
+    line-height: 24px;
+    letter-spacing: 2%;
+}
+
+@media only screen and (max-width: 360px){
     h1{
-        font-size: 96px;
+        font-size: 56px;
+        line-height: 64px;
+        letter-spacing: -5px;
     }
     h2{
-        font-size: 72px;
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -3%;
     }
     h3{
         font-size: 32px;
-    }
-    li, button, input{
-        font-size: 16px;
-        font-family: Georama;
-        font-weight: 500;
-    }
-    body{
-        margin: 0px;
-        font-size: 20px;
-        font-family: Georama;
-        font-weight: 500;
-    }
-    button{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        color: white;
-        box-sizing: content-box;
-        border: 0px;
-        border-radius: 32px;
-        background-color: #FF4D4D;
-        border: 2px solid #FF4D4D;
-        transition: 100ms ease-in-out;
-        &:hover{
-            cursor: pointer;
-            background-color: white;
-            color: #FF4D4D;
-        }
-        &:active{
-            cursor: pointer;
-            background-color: #FFD3D3;
-            color: #FF4D4D;
-        }
-        .arrow{
-            font-size: 32px;
-            font-weight: 200;
-            margin-bottom: 5px;
-        }
-    }
-    .btn-rect{
-        min-width: 192px;
-        height: 40px;
-    }
-    .btn-circle{
-        box-sizing: content-box;
-        border: 2px solid #FF4D4D;
-        border-radius: 100%;
-        font-size: 40px;
-        font-weight: 300;
-        height: 40px;
-        width: 42px;
-        padding: 0px;
-        .plus{
-            margin-bottom: 6px;
-        }
-        &:hover{
-            cursor: pointer;
-            background-color: white;
-            color: #FF4D4D;
-        }
-        &:active{
-            cursor: pointer;
-            background-color: #FFD3D3;
-            color: #FF4D4D;
-        }
-    }
-    ul{
-        list-style: none;
-    }
-    p{
-        /* margin: 0px; */
-        line-height: 24px;
-        letter-spacing: 2%;
+        line-height: 40px;
     }
 }
-

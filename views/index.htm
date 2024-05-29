@@ -5,165 +5,429 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/styles/style.css" />
     <link rel="stylesheet" href="../assets/styles/common.css" />
+    <!-- <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/less"
+      type="text/javascript"
+    ></script> -->
+    <script src="../assets/scripts/script.js"></script>
     <title>Document</title>
   </head>
+
   <body>
-    <section class="header">
-      <div class="header__navbar">
-        <a href="" class="logo">
-          <img src="../assets/images/logo.svg" alt="" />
-        </a>
-        <ul class="navbar__menu">
-          <li><a href="">Home Solar Batteries</a></li>
-          <li><a href="">Solar Panel Installation</a></li>
-          <li><a href="">How it works</a></li>
-          <li><a href="">Solar Guide</a></li>
-          <li><a href="">Contact Us</a></li>
-        </ul>
-        <button class="btn-rect">
-          Start Saving Now<span class="arrow">&#x2192;</span>
-        </button>
+    <!-- Header wrapped inside banner as banner covers header too -->
+    <div class="banner-wrapper">
+      <div class="banner__img">
+        <img src="../assets/images/bg.png" alt="" />
       </div>
-      <h1 class="header__title">Find Solar Providers <br />Near Me</h1>
-      <p class="header__subtitle">
-        Power Your Home with Clean, Renewable Energy!
-      </p>
-      <div class="header__zipcode">
-        <input type="text" name="zipcode" placeholder="Enter Zip code" id="" />
-        <button class="btn-rect">
-          Free Cost Estimate<span class="arrow">&#x2192;</span>
-        </button>
-      </div>
-      <div class="header__partners">
-        <p>Join 1,500+ companies already hiring with Solarenergyhost</p>
-        <div class="partners__logos">
-          <img src="../assets/images/Boeing-1.png" alt="" />
-          <img src="../assets/images/OnePlus-Logo.png" alt="" />
-          <img src="../assets/images/nyu-logo-1.png" alt="" />
-          <img src="../assets/images/IBM_logo-1.png" alt="" />
-          <img src="../assets/images/bang-olufsen-1.png.svg" alt="" />
-          <img src="../assets/images/porsche.png" alt="" />
-          <img src="../assets/images/Tata-Motors-Logo-1988-1.png" alt="" />
+      <div class="page-container">
+        <header>
+          <div class="header__navbar-wrapper">
+            <div class="logo-wrapper">
+              <a href="" class="logo">
+                <object data="../assets/images/logo.svg"></object>
+              </a>
+            </div>
+            <div class="navbar__menu-wrapper">
+              <ul class="navbar__menu">
+                <li><a href="">Home Solar Batteries</a></li>
+                <li><a href="">Solar Panel Installation</a></li>
+                <li><a href="">How it works</a></li>
+                <li><a href="">Solar Guide</a></li>
+                <li><a href="">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="button-wrapper">
+              <button class="btn-rect">
+                Start Saving Now<span class="arrow">&#x2192;</span>
+              </button>
+            </div>
+            <div class="burger-wrapper">
+              <a href="">
+                <object data="../assets/images/burger.svg"></object>
+              </a>
+            </div>
+          </div>
+        </header>
+        <div class="banner__content-wrapper">
+          <h1 class="banner__title">Find Solar Providers <br />Near Me</h1>
+          <p class="banner__subtitle">
+            Power Your Home with Clean, Renewable Energy!
+          </p>
+          <div class="banner__zipcode">
+            <input
+              type="text"
+              name="zipcode"
+              placeholder="Enter Zip code"
+              id=""
+            />
+            <button class="btn-rect">
+              Free Cost Estimate<span class="arrow">&#x2192;</span>
+            </button>
+          </div>
+        </div>
+        <div class="banner__partners-wrapper">
+          <p>Join 1,500+ companies already hiring with Solarenergyhost</p>
+          <div class="partners__logos">
+            <img src="../assets/images/Boeing-1.png" alt="" />
+            <img src="../assets/images/OnePlus-Logo.png" alt="" />
+            <img src="../assets/images/nyu-logo-1.png" alt="" />
+            <img src="../assets/images/IBM_logo-1.png" alt="" />
+            <img src="../assets/images/bang-olufsen-1.png" alt="" />
+            <img src="../assets/images/porsche.png" alt="" />
+            <img src="../assets/images/Tata-Motors-Logo-1988-1.png" alt="" />
+          </div>
         </div>
       </div>
-    </section>
-    <section class="faq">
-      <div class="faq__info">
-        <h2 class="faq__title">Frequently Asked<br />Questions</h2>
-        <p class="faq__subtitle">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's
-        </p>
+    </div>
+
+    <div class="page-container">
+      <div class="faq-wrapper">
+        <div class="faq__info">
+          <h2 class="faq__title">Frequently Asked<br />Questions</h2>
+          <p class="faq__subtitle">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's
+          </p>
+        </div>
+        <div class="faq__list-wrapper">
+          <ul class="faq__list">
+            <li>
+              <div class="list__qn">
+                <p>How do solar panels work?</p>
+                <button class="btn-circle" id="btn1" onclick="expand(this.id)">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      class="vertical-path"
+                      d="M8.22156 1.35596V14.6893"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M1.33899 7.78125H14.6723"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="list__ans" style="display: none">
+                <p>
+                  Explain the process of converting sunlight into electricity
+                  using photovoltaic cells.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="list__qn">
+                <p>How much do solar panels cost?</p>
+                <button class="btn-circle" id="btn2" onclick="expand(this.id)">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.22156 1.35596V14.6893"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M1.33899 7.78125H14.6723"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="list__ans" style="display: none" ;>
+                <p>INSERT ANSWER HERE</p>
+              </div>
+            </li>
+            <li>
+              <div class="list__qn">
+                <p>What are the financial benefits of going solar?</p>
+                <button class="btn-circle" id="btn3" onclick="expand(this.id)">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.22156 1.35596V14.6893"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M1.33899 7.78125H14.6723"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="list__ans" style="display: none" ;>
+                <p>INSERT ANSWER HERE</p>
+              </div>
+            </li>
+            <li>
+              <div class="list__qn">
+                <p>
+                  Are there government incentives available for solar
+                  installation?
+                </p>
+                <button class="btn-circle" id="btn4" onclick="expand(this.id)">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.22156 1.35596V14.6893"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M1.33899 7.78125H14.6723"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="list__ans" style="display: none" ;>
+                <p>INSERT ANSWER HERE</p>
+              </div>
+            </li>
+            <li>
+              <div class="list__qn">
+                <p>How long do solar panels last?</p>
+                <button class="btn-circle" id="btn5" onclick="expand(this.id)">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.22156 1.35596V14.6893"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M1.33899 7.78125H14.6723"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="list__ans" style="display: none" ;>
+                <p>INSERT ANSWER HERE</p>
+              </div>
+            </li>
+            <li>
+              <div class="list__qn">
+                <p>What size solar system do I need for my home?</p>
+                <button class="btn-circle" id="btn6" onclick="expand(this.id)">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.22156 1.35596V14.6893"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M1.33899 7.78125H14.6723"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="list__ans" style="display: none" ;>
+                <p>INSERT ANSWER HERE</p>
+              </div>
+            </li>
+            <li>
+              <div class="list__qn">
+                <p>Will solar panels work in my location?</p>
+                <button class="btn-circle" id="btn7" onclick="expand(this.id)">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.22156 1.35596V14.6893"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M1.33899 7.78125H14.6723"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="list__ans" style="display: none" ;>
+                <p>INSERT ANSWER HERE</p>
+              </div>
+            </li>
+            <li>
+              <div class="list__qn">
+                <p>How does solar energy benefit the environment?</p>
+                <button
+                  class="btn-circle"
+                  id="btn8"
+                  onclick="expand(this.id)"
+                  onclick="expand"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.22156 1.35596V14.6893"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M1.33899 7.78125H14.6723"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="list__ans" style="display: none" ;>
+                <p>INSERT ANSWER HERE</p>
+              </div>
+            </li>
+            <li>
+              <div class="list__qn">
+                <p>What is the installation process like?</p>
+                <button class="btn-circle" id="btn9" onclick="expand(this.id)">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.22156 1.35596V14.6893"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M1.33899 7.78125H14.6723"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="list__ans" style="display: none" ;>
+                <p>INSERT ANSWER HERE</p>
+              </div>
+            </li>
+            <li>
+              <div class="list__qn">
+                <p>
+                  Do I need to replace my roof before installing solar panels?
+                </p>
+                <button class="btn-circle" id="btn10" onclick="expand(this.id)">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.22156 1.35596V14.6893"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M1.33899 7.78125H14.6723"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="list__ans" style="display: none" ;>
+                <p>INSERT ANSWER HERE</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
-      <ul class="faq__list">
-        <li>
-          <div class="list__qn">
-            <p>How do solar panels work?</p>
-            <button class="btn-circle"><span class="plus">+</span></button>
-          </div>
-          <div class="list__ans">
-            <p>
-              Explain the process of converting sunlight into electricity using
-              photovoltaic cells.
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="list__qn">
-            <p>How much do solar panels cost?</p>
-            <button class="btn-circle"><span class="plus">+</span></button>
-          </div>
-          <div class="list__ans" style="display: none" ;>
-            <p>INSERT ANSWER HERE</p>
-          </div>
-        </li>
-        <li>
-          <div class="list__qn">
-            <p>What are the financial benefits of going solar?</p>
-            <button class="btn-circle"><span class="plus">+</span></button>
-          </div>
-        </li>
-        <li>
-          <div class="list__qn">
-            <p>
-              Are there government incentives available for solar installation?
-            </p>
-            <button class="btn-circle"><span class="plus">+</span></button>
-          </div>
-          <div class="list__ans" style="display: none" ;>
-            <p>INSERT ANSWER HERE</p>
-          </div>
-        </li>
-        <li>
-          <div class="list__qn">
-            <p>How long do solar panels last?</p>
-            <button class="btn-circle"><span class="plus">+</span></button>
-          </div>
-          <div class="list__ans" style="display: none" ;>
-            <p>INSERT ANSWER HERE</p>
-          </div>
-        </li>
-        <li>
-          <div class="list__qn">
-            <p>What size solar system do I need for my home?</p>
-            <button class="btn-circle"><span class="plus">+</span></button>
-          </div>
-          <div class="list__ans" style="display: none" ;>
-            <p>INSERT ANSWER HERE</p>
-          </div>
-        </li>
-        <li>
-          <div class="list__qn">
-            <p>Will solar panels work in my location?</p>
-            <button class="btn-circle"><span class="plus">+</span></button>
-          </div>
-          <div class="list__ans" style="display: none" ;>
-            <p>INSERT ANSWER HERE</p>
-          </div>
-        </li>
-        <li>
-          <div class="list__qn">
-            <p>How does solar energy benefit the environment?</p>
-            <button class="btn-circle"><span class="plus">+</span></button>
-          </div>
-          <div class="list__ans" style="display: none" ;>
-            <p>INSERT ANSWER HERE</p>
-          </div>
-        </li>
-        <li>
-          <div class="list__qn">
-            <p>What is the installation process like?</p>
-            <button class="btn-circle"><span class="plus">+</span></button>
-          </div>
-          <div class="list__ans" style="display: none" ;>
-            <p>INSERT ANSWER HERE</p>
-          </div>
-        </li>
-        <li>
-          <div class="list__qn">
-            <p>Do I need to replace my roof before installing solar panels?</p>
-            <button class="btn-circle"><span class="plus">+</span></button>
-          </div>
-          <div class="list__ans" style="display: none" ;>
-            <p>INSERT ANSWER HERE</p>
-          </div>
-        </li>
-      </ul>
-    </section>
-    <section class="footer">
-      <div class="header__navbar">
+    </div>
+    <footer>
+      <div class="footer__logo-wrapper">
         <a href="" class="logo">
-          <img src="../assets/images/logo.svg" alt="" />
+          <object data="../assets/images/logo.svg"></object>
         </a>
-        <ul class="navbar__menu">
-          <li><a href="">Home Solar Batteries</a></li>
-          <li><a href="">Solar Panel Installation</a></li>
-          <li><a href="">How it works</a></li>
-          <li><a href="">Solar Guide</a></li>
-          <li><a href="">Contact Us</a></li>
-        </ul>
-        <div class="cpr">Copyright © 2018 - 2023 Solarhost co.</div>
       </div>
-    </section>
+      <div class="footer__menu-wrapper">
+        <div class="navbar__menu-wrapper">
+          <ul class="navbar__menu">
+            <li><a href="">Home Solar Batteries</a></li>
+            <li><a href="">Solar Panel Installation</a></li>
+            <li><a href="">How it works</a></li>
+            <li><a href="">Solar Guide</a></li>
+            <li><a href="">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="cpr-wrapper">Copyright © 2018 - 2023 Solarhost co.</div>
+    </footer>
   </body>
 </html>
