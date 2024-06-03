@@ -212,7 +212,6 @@ footer {
         font-size: 16px;
         color: #ffffff;
         opacity: 40%;
-        text-wrap: wrap;
       }
     }
   }
@@ -436,10 +435,14 @@ footer {
 }
 
 @media only screen and (max-width: 350px) {
-  .burger__menu {
+  .burger__menu,
+  .navbar__menu {
     li {
       text-wrap: wrap;
     }
+  }
+  .cpr-wrapper {
+    text-wrap: wrap;
   }
 }
 

@@ -82,6 +82,7 @@ button {
 .btn-rect {
   max-width: 192px;
   height: 40px;
+  width: 100%;
 }
 .btn-circle {
   box-sizing: content-box;
