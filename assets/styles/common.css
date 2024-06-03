@@ -30,13 +30,7 @@ h2 {
 h3 {
   font-size: 32px;
 }
-li,
-button,
-input {
-  font-size: 16px;
-  font-family: Georama;
-  font-weight: 500;
-}
+
 body {
   position: relative;
   margin: 0px;
@@ -57,24 +51,37 @@ button {
   background-color: #ff4d4d;
   border: 2px solid #ff4d4d;
   transition: 100ms ease-in-out;
+  font-family: Georama;
+  width: 100%;
+  text-wrap: nowrap;
+  .arrow {
+    font-size: 32px;
+    font-weight: 200;
+    margin-bottom: 8px;
+  }
+  svg {
+    transition: 100ms ease-in-out;
+  }
   &:hover {
     cursor: pointer;
     background-color: white;
     color: #ff4d4d;
+    svg {
+      path {
+        stroke: #ff4d4d;
+        fill: #ff4d4d;
+      }
+    }
   }
   &:active {
     cursor: pointer;
     background-color: #ffd3d3;
-    color: #ff4d4d;
-  }
-  .arrow {
-    font-size: 32px;
-    font-weight: 200;
-    margin-bottom: 5px;
+    stroke: #ff4d4d;
+    fill: #ff4d4d;
   }
 }
 .btn-rect {
-  min-width: 192px;
+  max-width: 192px;
   height: 40px;
 }
 .btn-circle {
@@ -87,20 +94,6 @@ button {
   min-width: 40px;
   padding: 0px;
   transition: 100ms ease-in-out;
-  &:hover {
-    cursor: pointer;
-    background-color: white;
-    svg {
-      path {
-        stroke: #ff4d4d;
-      }
-    }
-  }
-  &:active {
-    cursor: pointer;
-    background-color: #ffd3d3;
-    color: #ff4d4d;
-  }
 }
 ul {
   list-style: none;
@@ -130,5 +123,15 @@ p {
   }
   p {
     font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  li,
+  button,
+  input {
+    font-size: 16px;
+    font-family: Georama;
+    font-weight: 500;
   }
 }

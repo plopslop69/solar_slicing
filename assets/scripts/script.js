@@ -75,3 +75,32 @@ function collapse(btnID) {
   pathVertical.style.display = "block";
   content.style.display = "none";
 }
+
+let burger_toggle = 0;
+
+function burger() {
+  let burgerBtn = document.getElementsByClassName("burger-wrapper")[0];
+  let burgerMenu = document.getElementById("burger-menu");
+  let header = document.getElementsByTagName("header")[0];
+  let headerLogo = document.getElementsByClassName("navbar__logo-wrapper")[0];
+  if (burger_toggle == 0) {
+    console.log("clicked");
+    burgerMenu.style.display = "block";
+    header.style.backgroundColor = "#FFFFFF";
+    burgerBtn.children[1].style.display = "block";
+    burgerBtn.children[0].style.display = "none";
+    console.log(headerLogo);
+    headerLogo.firstElementChild.style.display = "none";
+    headerLogo.lastElementChild.style.display = "block";
+    burger_toggle = 1;
+  } else if (burger_toggle == 1) {
+    console.log("unclicked");
+    burgerMenu.style.display = "none";
+    header.style.backgroundColor = "transparent";
+    burgerBtn.children[1].style.display = "none";
+    burgerBtn.children[0].style.display = "block";
+    headerLogo.firstElementChild.style.display = "block";
+    headerLogo.lastElementChild.style.display = "none";
+    burger_toggle = 0;
+  }
+}
