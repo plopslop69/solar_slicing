@@ -52,7 +52,6 @@ button {
   border: 2px solid #ff4d4d;
   transition: 100ms ease-in-out;
   font-family: Georama;
-  width: 100%;
   text-wrap: nowrap;
   .arrow {
     font-size: 32px;
