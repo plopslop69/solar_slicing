@@ -1,17 +1,11 @@
 .banner-wrapper {
-  .landing__img {
-    .overlay {
-      position: absolute;
-      background: #381606;
-      width: 100%;
-      height: 100%;
-      opacity: 40%;
-      z-index: -1;
-    }
-  }
   .page--container {
     .banner__banner-info {
       z-index: 1;
+      .banner-info__title {
+        max-width: 1168px;
+        margin: 0 auto;
+      }
       .banner-info__subtitle {
         padding-bottom: 0px;
         max-width: 806px;
@@ -19,7 +13,10 @@
     }
     .banner__zipcode {
       margin-top: 96px;
-      margin-bottom: 256px;
+      margin-bottom: 288px;
+    }
+    .austin {
+      margin-bottom: 184px;
     }
   }
 }
@@ -28,36 +25,149 @@
   color: #381606;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 144px 0px;
-  h2 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
   .content-wrapper {
-    display: flex;
     flex-direction: column;
+
+    display: flex;
     gap: 6px;
-    .content {
+    .content__title {
+      h2 {
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+    .content__body {
       display: flex;
       gap: 42px;
       text-align: left;
       .content__img {
         object-fit: contain;
       }
-      .content__body {
+      .body__text {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-top: 58px;
         p {
           opacity: 72%;
-          line-height: 32px;
           letter-spacing: 0.02em;
         }
       }
     }
-    @media only screen and (max-width: 768px) {
-      flex-direction: column-reverse;
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 144px 0px;
+    .content-wrapper {
+      .content__img-mobile {
+        display: none;
+      }
+      .body__img-desktop {
+        display: block;
+      }
+      .body__text {
+        padding-top: 58px;
+        p {
+          line-height: 32px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 96px 0px;
+    .content-wrapper {
+      gap: 24px;
+      .content__img-mobile {
+        display: block;
+        margin: 0 auto;
+        .content__img {
+          max-width: 137.09px;
+        }
+      }
+      .body__img-desktop {
+        display: none;
+      }
+      .body__text {
+        gap: 16px;
+        text-align: center;
+        p {
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+.educational-content {
+  padding: 144px 0px;
+  .page--container {
+    justify-content: center;
+    text-align: center;
+    color: #381606;
+    .content__info {
+      .info__subtitle {
+        padding-top: 24px;
+        opacity: 72%;
+        max-width: 706px;
+        margin: 0 auto;
+        @media screen and (max-width: 768px) {
+          padding-bottom: 56px;
+        }
+        @media screen and (min-width: 768px) {
+          padding-bottom: 64px;
+        }
+      }
+    }
+    .content__edu-cards-wrapper {
+      box-sizing: border-box;
+      .edu-cards {
+        display: flex;
+        gap: 32px;
+        .edu-card {
+          background-color: #fff4e7;
+          border-radius: 32px;
+          max-width: 416px;
+          text-align: left;
+          padding: 32px;
+          .edu-card__info {
+            color: #381606;
+            .edu-card__title {
+              h3 {
+                font-weight: 700;
+                line-height: 40px;
+                letter-spacing: -0.8px;
+                text-wrap: wrap;
+                padding-bottom: 8px;
+              }
+            }
+            .edu-card__subtitle {
+              p {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                padding-bottom: 32px;
+              }
+            }
+          }
+          .edu-card__button {
+            background-color: #ffa030;
+            border: none;
+            max-width: 142px;
+            color: white;
+            svg {
+              path {
+                fill: white;
+                stroke: white;
+              }
+            }
+          }
+          &:hover {
+            background-color: #fddbb5;
+            cursor: url(../images/cursor.svg), auto;
+          }
+        }
+      }
     }
   }
 }

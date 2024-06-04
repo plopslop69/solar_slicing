@@ -46,7 +46,7 @@ header {
         list-style: none;
         width: 100%;
         a {
-          font-weight: 400;
+          font-weight: 600;
           text-decoration: none;
           text-wrap: nowrap;
           &:visited {
@@ -127,28 +127,60 @@ header {
       font-weight: 500;
     }
     .partners__logos {
+      overflow: hidden;
       .logos {
         height: 72px;
         display: flex;
         justify-content: center;
         gap: 24px;
         align-items: center;
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          max-width: 144px;
+          max-height: 72px;
+          img {
+            max-width: 122.16px;
+            max-height: 52.94px;
+          }
+        }
       }
     }
   }
 }
 
 .faq-wrapper {
+  h2 {
+    margin: 0px;
+    padding-bottom: 24px;
+    @media screen and (max-width: 768px) {
+      padding-top: 96px;
+    }
+    @media screen and (min-width: 768px) {
+      padding-top: 144px;
+    }
+    padding-top: 144px;
+  }
   .faq__info {
     max-width: 704px;
     margin: 0 auto;
+    @media screen and (max-width: 768px) {
+      .faq__subtitle {
+        padding-bottom: 56px;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      .faq__subtitle {
+        padding-bottom: 64px;
+      }
+    }
     .faq__title {
       color: #381606;
       text-align: center;
-      margin-bottom: 24px;
+      word-wrap: break-word;
     }
     .faq__subtitle {
-      line-height: 32px;
       color: #381606;
       letter-spacing: 2%;
       text-align: center;
@@ -159,7 +191,6 @@ header {
     flex-direction: column;
     gap: 24px;
     margin: 0 auto;
-    margin-top: 64px;
     justify-content: center;
     max-width: 864px;
     color: #381606;
@@ -195,6 +226,8 @@ header {
 }
 
 footer {
+  bottom: 0;
+  width: 100%;
   text-align: center;
   margin-top: 150px;
   background-color: #381606;
@@ -221,7 +254,7 @@ footer {
           margin-bottom: 0px;
           list-style: none;
           a {
-            font-weight: 400;
+            font-weight: 500;
             text-decoration: none;
             &:visited {
               color: white;
@@ -314,6 +347,7 @@ footer {
 @media only screen and (max-width: 1220px) {
   .header__navbar-wrapper {
     flex-direction: column;
+    gap: 32px;
     .navbar__menu-wrapper {
       padding: 10px;
     }
@@ -375,7 +409,6 @@ footer {
               font-size: 16px;
               font-weight: 700;
               margin: 0 auto;
-              width: calc(100% - 32px);
             }
           }
         }
@@ -527,6 +560,7 @@ footer {
 
 /* Burger Menu Class */
 .burger-on {
+  position: fixed;
   background-color: #ffffff;
   .navbar__logo-wrapper {
     .logo-white {
@@ -538,6 +572,7 @@ footer {
   }
   .header__burger-menu-wrapper {
     display: flex;
+    text-align: center;
   }
   .burger-wrapper {
     #burger {
