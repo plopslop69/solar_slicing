@@ -86,9 +86,11 @@ function burger() {
   if (burger_toggle == 0) {
     header.setAttribute("class", "burger-on");
     burger_toggle = 1;
+    document.body.style.overflow = "hidden";
   } else if (burger_toggle == 1) {
     header.setAttribute("class", null);
     burger_toggle = 0;
+    document.body.style.overflow = "auto";
   }
 }
 
