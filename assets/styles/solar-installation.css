@@ -23,3 +23,41 @@
     }
   }
 }
+
+.maximize-efficiency {
+  color: #381606;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 144px 0px;
+  h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    .content {
+      display: flex;
+      gap: 42px;
+      text-align: left;
+      .content__img {
+        object-fit: contain;
+      }
+      .content__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 58px;
+        p {
+          opacity: 72%;
+          line-height: 32px;
+          letter-spacing: 0.02em;
+        }
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+  }
+}
