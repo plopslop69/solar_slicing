@@ -118,56 +118,81 @@
         }
       }
     }
-    .content__edu-cards-wrapper {
-      box-sizing: border-box;
-      .edu-cards {
-        display: flex;
-        gap: 32px;
-        .edu-card {
-          background-color: #fff4e7;
-          border-radius: 32px;
-          max-width: 416px;
-          text-align: left;
-          padding: 32px;
-          .edu-card__info {
-            color: #381606;
-            .edu-card__title {
-              h3 {
-                font-weight: 700;
-                line-height: 40px;
-                letter-spacing: -0.8px;
-                text-wrap: wrap;
-                padding-bottom: 8px;
-              }
-            }
-            .edu-card__subtitle {
-              p {
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 24px;
-                letter-spacing: 0.02em;
-                padding-bottom: 32px;
-              }
+  }
+
+  .content__edu-cards-wrapper {
+    .edu-cards {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      .edu-card {
+        box-sizing: border-box;
+        background-color: #fff4e7;
+        border-radius: 32px;
+        max-width: 416px;
+        text-align: left;
+        padding: 32px;
+        .edu-card__info {
+          color: #381606;
+          .edu-card__title {
+            h3 {
+              font-weight: 700;
+              line-height: 40px;
+              letter-spacing: -0.8px;
+              text-wrap: wrap;
+              padding-bottom: 8px;
             }
           }
-          .edu-card__button {
-            background-color: #ffa030;
-            border: none;
-            max-width: 142px;
-            color: white;
-            svg {
-              path {
-                fill: white;
-                stroke: white;
-              }
+          .edu-card__subtitle {
+            p {
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 24px;
+              letter-spacing: 0.02em;
+              padding-bottom: 32px;
             }
           }
+        }
+        .edu-card__button {
+          background-color: #ffa030;
+          border: none;
+          max-width: 142px;
+          color: white;
           &:hover {
-            background-color: #fddbb5;
-            cursor: url(../images/cursor.svg), auto;
+            cursor: url("../images/cursor.svg"), auto;
           }
+          svg {
+            path {
+              fill: white;
+              stroke: white;
+            }
+          }
+        }
+        &:hover {
+          background-color: #fddbb5;
+          cursor: url(../images/cursor.svg), auto;
         }
       }
     }
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.swiper-button-next {
+  all: unset;
+}
+
+.custom-swiper-pagination {
+  .custom-swiper-pagination-bullets {
+    background-color: rebeccapurple;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
   }
 }
