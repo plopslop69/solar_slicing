@@ -121,56 +121,83 @@
   }
 
   .content__edu-cards-wrapper {
+    @media screen and (max-width: 450px) {
+      .edu-cards {
+        margin-left: 0px;
+        .edu-card-wrapper {
+          margin: 0px 16px;
+        }
+      }
+    }
+    @media screen and (min-width: 451px) {
+      .edu-cards {
+        margin-left: 32px;
+        .edu-card {
+          max-width: 328px;
+        }
+      }
+    }
+    @media screen and (min-width: 769px) {
+      .edu-cards {
+        margin-left: 64px;
+        .edu-card {
+          max-width: 416px;
+          .edu-card-wrapper {
+            padding: 0px;
+          }
+        }
+      }
+    }
     .edu-cards {
       display: flex;
-      gap: 32px;
-      justify-content: center;
+      justify-content: space-around;
+      overflow: visible;
       .edu-card {
-        box-sizing: border-box;
-        background-color: #fff4e7;
-        border-radius: 32px;
-        max-width: 416px;
-        text-align: left;
-        padding: 32px;
-        .edu-card__info {
-          color: #381606;
-          .edu-card__title {
-            h3 {
-              font-weight: 700;
-              line-height: 40px;
-              letter-spacing: -0.8px;
-              text-wrap: wrap;
-              padding-bottom: 8px;
+        .edu-card-wrapper {
+          background-color: #fff4e7;
+          border-radius: 32px;
+          text-align: left;
+          padding: 32px;
+          .edu-card__info {
+            color: #381606;
+            .edu-card__title {
+              h3 {
+                font-weight: 700;
+                line-height: 40px;
+                letter-spacing: -0.8px;
+                text-wrap: wrap;
+                padding-bottom: 8px;
+              }
+            }
+            .edu-card__subtitle {
+              p {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                padding-bottom: 32px;
+              }
             }
           }
-          .edu-card__subtitle {
-            p {
-              font-size: 16px;
-              font-weight: 500;
-              line-height: 24px;
-              letter-spacing: 0.02em;
-              padding-bottom: 32px;
+          .edu-card__button {
+            background-color: #ffa030;
+            border: none;
+            max-width: 142px;
+            color: white;
+            &:hover {
+              cursor: url("../images/cursor.svg"), auto;
+            }
+            svg {
+              path {
+                fill: white;
+                stroke: white;
+              }
             }
           }
-        }
-        .edu-card__button {
-          background-color: #ffa030;
-          border: none;
-          max-width: 142px;
-          color: white;
           &:hover {
-            cursor: url("../images/cursor.svg"), auto;
+            background-color: #fddbb5;
+            cursor: url(../images/cursor.svg), auto;
           }
-          svg {
-            path {
-              fill: white;
-              stroke: white;
-            }
-          }
-        }
-        &:hover {
-          background-color: #fddbb5;
-          cursor: url(../images/cursor.svg), auto;
         }
       }
     }
@@ -183,16 +210,49 @@
   overflow: hidden;
 }
 
-.swiper-button-next {
-  all: unset;
-}
-
-.custom-swiper-pagination {
-  .custom-swiper-pagination-bullets {
-    background-color: rebeccapurple;
-    z-index: 10;
+.swiper-navBtns-wrapper {
+  position: relative;
+  padding-top: 32px;
+  margin: 0 auto;
+  display: flex;
+  max-width: 280px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  .custom-swiper-button-prev,
+  .custom-swiper-button-next {
+    &:hover {
+      cursor: pointer;
+      svg {
+        circle {
+          fill: #ffa030;
+        }
+        path {
+          stroke: #ffffff;
+        }
+      }
+    }
+  }
+  .swiper-pagination {
+    position: static;
     display: flex;
-    flex-direction: row;
-    gap: 8px;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    max-width: 152px;
+    .swiper-pagination-bullet {
+      background: rgba(255, 160, 48, 0.1);
+      width: 12px;
+      height: 12px;
+      opacity: 1;
+      margin: 0px !important;
+      padding: 0px;
+    }
+    .swiper-pagination-bullet-active {
+      background: rgba(255, 160, 48, 1); /* #FFA030 color with 100% opacity */
+      width: 12px;
+      height: 12px;
+      opacity: 1;
+    }
   }
 }

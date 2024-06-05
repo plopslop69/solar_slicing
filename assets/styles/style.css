@@ -163,7 +163,7 @@ header {
     @media screen and (max-width: 768px) {
       padding-top: 96px;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 769px) {
       padding-top: 144px;
     }
     padding-top: 144px;
@@ -176,7 +176,7 @@ header {
         padding-bottom: 56px;
       }
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 769px) {
       .faq__subtitle {
         padding-bottom: 64px;
       }
@@ -283,7 +283,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .banner__banner-info {
     .banner-info__title {
       padding-top: 160px;
@@ -334,7 +334,7 @@ footer {
   } */
 }
 
-@media only screen and (min-width: 540px) {
+@media only screen and (min-width: 541px) {
   .banner__banner-info {
     .banner-info__title {
       .near {
@@ -366,7 +366,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1220px) {
+@media only screen and (min-width: 1221px) {
   .banner__banner-info {
     .banner-info__title {
       padding-top: 0px;
@@ -374,7 +374,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .page--container {
     padding: 0px 16px;
   }
@@ -481,7 +481,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 360px) {
+@media only screen and (min-width: 361px) {
   header {
     padding-top: 16px;
   }
@@ -492,7 +492,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 451px) {
   header {
     .header__burger-menu-wrapper {
       height: calc(100% - 81px);
